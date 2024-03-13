@@ -2,7 +2,9 @@ package com.example.happyuapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -26,7 +28,14 @@ public class LogInActivity extends AppCompatActivity {
         logInButton = findViewById(R.id.logInButton);
         forgotPasswordBtn = findViewById(R.id.forgotPasswordBtn);
 
-
+        // LogIn Button
+        logInButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), ChatBotActivity.class);
+                startActivity(i);
+            }
+        });
 
 
     }
