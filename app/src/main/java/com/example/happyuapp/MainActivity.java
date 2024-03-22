@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     ImageView logoImg;
     TextView sloganTxt, existingAccountTxt;
-    Button signUpBtn, logInBtn;
+    Button seConnecterBtn, inscrireBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,17 +23,25 @@ public class MainActivity extends AppCompatActivity {
         // Declaring the views
         logoImg = findViewById(R.id.logoApp);
         sloganTxt = findViewById(R.id.sloganApp);
-        signUpBtn = findViewById(R.id.signUpBtn);
-        logInBtn = findViewById(R.id.logInBtn);
+        seConnecterBtn = findViewById(R.id.se_connecter_btn);
+        inscrireBtn = findViewById(R.id.inscrireBtn);
         existingAccountTxt = findViewById(R.id.ExistingTxt);
 
         // Adding functionalities
         logoImg.setImageResource(R.drawable.logo);
 
-        signUpBtn.setOnClickListener(new View.OnClickListener() {
+        seConnecterBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), LogInActivity.class);
+                startActivity(i);
+            }
+        });
+
+        inscrireBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), RegisterActivity.class);
                 startActivity(i);
             }
         });

@@ -11,9 +11,9 @@ import android.widget.TextView;
 
 public class LogInActivity extends AppCompatActivity {
 
-    TextView logInTxt, welcomeBackTxt;
+    TextView logInTxt;
     EditText emailEditText, passwordEditText;
-    Button logInButton, forgotPasswordBtn;
+    Button logInButton, RegisterButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,12 +21,10 @@ public class LogInActivity extends AppCompatActivity {
         setContentView(R.layout.activity_log_in);
 
         // declaring the views
-        logInTxt = findViewById(R.id.logInTxt);
-        welcomeBackTxt = findViewById(R.id.welcomeBackTxt);
         emailEditText = findViewById(R.id.emailEditText);
         passwordEditText = findViewById(R.id.passwordEditText);
         logInButton = findViewById(R.id.logInButton);
-        forgotPasswordBtn = findViewById(R.id.forgotPasswordBtn);
+        RegisterButton = findViewById(R.id.RegisterButton);
 
         // LogIn Button
         logInButton.setOnClickListener(new View.OnClickListener() {

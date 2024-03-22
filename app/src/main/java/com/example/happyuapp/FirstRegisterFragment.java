@@ -1,5 +1,6 @@
 package com.example.happyuapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +8,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,6 +17,9 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class FirstRegisterFragment extends Fragment {
+
+    EditText emailEdit, passwordEdit, passwordConfirmationEdit;
+    Button suivantBtn, registerButton;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -53,12 +59,35 @@ public class FirstRegisterFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_first_register, container, false);
+        View view =  inflater.inflate(R.layout.fragment_first_register, container, false);
+        emailEdit = view.findViewById(R.id.adresse_mail_edit_text);
+        passwordEdit = view.findViewById(R.id.mot_de_passe_edit_text);
+        passwordConfirmationEdit = view.findViewById(R.id.confirmation_de_mot_de_passe_edit_text);
+        suivantBtn = view.findViewById(R.id.suivant_btn);
+        registerButton = view.findViewById(R.id.register_button);
+
+        suivantBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Replace the current fragment with the SecondRegisterFragment
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.firstFragment, new SecondRegisterFragment())
+                        .addToBackStack(null) // Optional: Adds the transaction to the back stack
+                        .commit();
+            }
+        });
+
+
+        return view;
+
     }
 }
