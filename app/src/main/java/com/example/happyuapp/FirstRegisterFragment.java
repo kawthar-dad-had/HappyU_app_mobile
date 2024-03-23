@@ -1,6 +1,8 @@
 package com.example.happyuapp;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -60,8 +63,6 @@ public class FirstRegisterFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
 
-
-
     }
 
     @Override
@@ -78,6 +79,33 @@ public class FirstRegisterFragment extends Fragment {
         suivantBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                String email = emailEdit.getText().toString().trim();
+                String password = passwordEdit.getText().toString().trim();
+                String passwordConfimation = passwordConfirmationEdit.getText().toString().trim();
+
+                if (email.isEmpty() || password.isEmpty()) {
+                    Toast.makeText(getActivity(), "Veuillez remplir tous les champs", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+
+                boolean isValid = checkLoginCredentials(email, password);
+
+                if (!isValid) {
+                    DatabaseHelper dbHelper = new DatabaseHelper(getActivity());
+                    boolean insertionReussie = dbHelper.insertCompte(email, password);
+
+                    if (insertionReussie) {
+                        Toast.makeText(getActivity(), "Compte inséré avec succès", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(getActivity(), "Échec de l'insertion du compte", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    Toast.makeText(getActivity(), "Email existe déja", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 // Replace the current fragment with the SecondRegisterFragment
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.firstFragment, new SecondRegisterFragment())
@@ -90,4 +118,36 @@ public class FirstRegisterFragment extends Fragment {
         return view;
 
     }
+    private boolean checkLoginCredentials(String email, String password) {
+        DatabaseHelper dbHelper = new DatabaseHelper(getActivity());
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+
+        String[] projection = {
+                DatabaseHelper.COLUMN_EMAIL,
+                DatabaseHelper.COLUMN_PASSWORD
+        };
+
+        String selection = DatabaseHelper.COLUMN_EMAIL + " = ? AND " +
+                DatabaseHelper.COLUMN_PASSWORD + " = ?";
+
+        String[] selectionArgs = {email, password};
+
+        Cursor cursor = db.query(
+                DatabaseHelper.TABLE_COMPTES,
+                projection,
+                selection,
+                selectionArgs,
+                null,
+                null,
+                null
+        );
+
+        boolean isValid = cursor.getCount() > 0;
+
+        cursor.close();
+        db.close();
+
+        return isValid;
+    }
+
 }
