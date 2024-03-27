@@ -54,7 +54,7 @@ public class LogInActivity extends AppCompatActivity {
                 boolean isValid = checkLoginCredentials(email, password);
 
                 if (isValid) {
-                    Intent i = new Intent(getApplicationContext(), ChatBotActivity.class);
+                    Intent i = new Intent(getApplicationContext(), MainActivity2.class);
                     startActivity(i);
                     finish();
                 } else {
