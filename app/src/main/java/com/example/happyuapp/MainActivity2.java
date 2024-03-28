@@ -30,19 +30,19 @@ public class MainActivity2 extends AppCompatActivity {
         binding = ActivityMain2Binding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        replaceFragment(new HomeFragment());
+        replaceFragment(new CitationFragment());
 
         binding.bottomNavigationView.setBackground(null);
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
-            if (item.getItemId() == R.id.home){
-                replaceFragment(new HomeFragment());
-            } else if (item.getItemId() == R.id.shorts) {
-                replaceFragment(new ShortsFragment());
-            } else if (item.getItemId() == R.id.subscriptions) {
-                replaceFragment(new SubscriptionFragment());
+            if (item.getItemId() == R.id.citation){
+                replaceFragment(new CitationFragment());
+            } else if (item.getItemId() == R.id.statistique) {
+                replaceFragment(new StatistiqueFragment());
+            } else if (item.getItemId() == R.id.mood) {
+                replaceFragment(new MoodFragment());
 
-            } else if (item.getItemId() == R.id.library) {
-                replaceFragment(new LibraryFragment());
+            } else if (item.getItemId() == R.id.chatbot) {
+                replaceFragment(new ChatbotFragment());
 
             }
 
