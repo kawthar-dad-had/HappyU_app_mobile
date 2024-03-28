@@ -1,12 +1,14 @@
 package com.example.happyuapp;
 
+import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import androidx.fragment.app.Fragment;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -34,7 +36,7 @@ public class CitationFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment CitationFragment.
+     * @return A new instance of fragment CitationFragment
      */
     // TODO: Rename and change types and number of parameters
     public static CitationFragment newInstance(String param1, String param2) {
@@ -53,12 +55,45 @@ public class CitationFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+        // Configurez l'AlarmManager pour déclencher le service toutes les deux heures
+        //new NotificationScheduler().scheduleNotification(requireContext());
+
+        // Affiche la notification de test lors de la création du fragment
+        showTestNotification();
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_citation, container, false);
+        View view = inflater.inflate(R.layout.fragment_citation, container, false);
+
+        ImageView imageViewQuizOption = view.findViewById(R.id.imageViewQuizOption);
+        imageViewQuizOption.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                requireActivity().onBackPressed(); // Retourne en arrière lorsque l'image est cliquée
+            }
+        });
+
+        TextView fff = view.findViewById(R.id.list);
+        fff.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Code à exécuter lors du clic sur le bouton "Terminer"
+                //Intent intent = new Intent(requireContext(), Calendrier.class);
+                //startActivity(intent);
+            }
+        });
+
+        return view;
+    }
+
+    private void showTestNotification() {
+        // Créez une intention pour déclencher le service de notification
+        //Intent intent = new Intent(requireContext(), NotificationScheduler.class);
+        //intent.setAction("com.example.notification.TEST_NOTIFICATION");
+        //requireContext().sendBroadcast(intent);
     }
 }
