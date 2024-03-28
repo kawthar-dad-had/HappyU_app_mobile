@@ -3,16 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/green"
-    tools:context=".CitationFragment">
+    tools:context=".ChatbotFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Library"
-        android:gravity="center"
-        android:textSize="30sp"
-        android:textColor="@color/white" />
+        android:text="@string/hello_blank_fragment" />
 
 </FrameLayout>
