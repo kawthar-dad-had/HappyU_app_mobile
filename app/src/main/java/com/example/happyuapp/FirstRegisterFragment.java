@@ -76,6 +76,14 @@ public class FirstRegisterFragment extends Fragment {
         suivantBtn = view.findViewById(R.id.suivant_btn);
         registerButton = view.findViewById(R.id.register_button);
 
+        registerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getContext(), LogInActivity.class);
+                startActivity(i);
+            }
+        });
+
         suivantBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

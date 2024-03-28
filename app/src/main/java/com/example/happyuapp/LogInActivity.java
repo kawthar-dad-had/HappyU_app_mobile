@@ -39,6 +39,15 @@ public class LogInActivity extends AppCompatActivity {
             Toast.makeText(this, "Échec de l'insertion du compte", Toast.LENGTH_SHORT).show();
         }
 
+        // Register Button
+        RegisterButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), RegisterActivity.class);
+                startActivity(i);
+            }
+        });
+
         // LogIn Button
         logInButton.setOnClickListener(new View.OnClickListener() {
             @Override

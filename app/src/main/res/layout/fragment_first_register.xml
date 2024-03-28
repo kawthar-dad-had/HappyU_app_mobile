@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/firstFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FirstRegisterFragment">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/green">
@@ -75,7 +74,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:hint="Adresse mail"
                 app:boxCornerRadiusBottomEnd="8dp"
                 app:boxCornerRadiusBottomStart="8dp"
                 app:boxCornerRadiusTopEnd="8dp"
@@ -87,6 +85,7 @@
                     android:id="@+id/adresse_mail_edit_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:hint="Adresse mail"
                     android:drawableStart="@drawable/baseline_mail_24"
                     android:drawablePadding="20dp"
                     android:drawableTint="@color/green"
@@ -100,7 +99,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:hint="Mot de passe"
                 app:boxCornerRadiusBottomEnd="8dp"
                 app:boxCornerRadiusBottomStart="8dp"
                 app:boxCornerRadiusTopEnd="8dp"
@@ -110,6 +108,7 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/mot_de_passe_edit_text"
+                    android:hint="Mot de passe"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/baseline_lock_outline_24"
@@ -121,42 +120,44 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:hint="Confirmez votre mot de passe"
                 app:boxCornerRadiusBottomEnd="8dp"
                 app:boxCornerRadiusBottomStart="8dp"
                 app:boxCornerRadiusTopEnd="8dp"
                 app:boxCornerRadiusTopStart="8dp"
                 app:boxStrokeColor="@color/green"
                 app:hintTextColor="@color/black"
-                app:passwordToggleEnabled="true">
+                >
 
-                <com.google.android.material.textfield.TextInputEditText
+                <EditText
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                     android:id="@+id/confirmation_de_mot_de_passe_edit_text"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:drawableStart="@drawable/baseline_lock_outline_24"
-                    android:drawablePadding="20dp"
-                    android:drawableTint="@color/green"
+                    android:layout_height="55dp"
                     android:inputType="textPassword"
-                    android:padding="20dp" />
+                    android:drawableTint="@color/green"
+                    android:drawablePadding="20dp"
+                    android:padding="20dp"
+                    android:drawableStart="@drawable/baseline_lock_outline_24"
+                    android:hint="Confirmez votre mot de passe"
+                    android:textColorHint="@color/black" />
 
             </com.google.android.material.textfield.TextInputLayout>
+
 
             <Button
                 android:id="@+id/suivant_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:backgroundTint="@color/green"
+                android:backgroundTint="@color/btn_color"
                 android:fontFamily="@font/dm_medium"
                 android:padding="20dp"
                 android:text="Suivant"
                 android:textAllCaps="true"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="18sp">
 
             </Button>
