@@ -57,9 +57,9 @@ public class CitationFragment extends Fragment {
         }
 
         // Configurez l'AlarmManager pour déclencher le service toutes les deux heures
-        //new NotificationScheduler().scheduleNotification(requireContext());
+        new NotificationScheduler().scheduleNotification(requireContext());
 
-        // Affiche la notification de test lors de la création du fragment
+        //Affiche la notification de test lors de la création du fragment
         showTestNotification();
     }
 
@@ -69,31 +69,18 @@ public class CitationFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_citation, container, false);
 
-        ImageView imageViewQuizOption = view.findViewById(R.id.imageViewQuizOption);
-        imageViewQuizOption.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                requireActivity().onBackPressed(); // Retourne en arrière lorsque l'image est cliquée
-            }
-        });
 
-        TextView fff = view.findViewById(R.id.list);
-        fff.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Code à exécuter lors du clic sur le bouton "Terminer"
-                //Intent intent = new Intent(requireContext(), Calendrier.class);
-                //startActivity(intent);
-            }
-        });
+
+
+
 
         return view;
     }
 
     private void showTestNotification() {
-        // Créez une intention pour déclencher le service de notification
-        //Intent intent = new Intent(requireContext(), NotificationScheduler.class);
-        //intent.setAction("com.example.notification.TEST_NOTIFICATION");
-        //requireContext().sendBroadcast(intent);
+
+        Intent intent = new Intent(requireContext(), NotificationScheduler.class);
+        intent.setAction("com.example.notification.TEST_NOTIFICATION");
+        requireContext().sendBroadcast(intent);
     }
 }
