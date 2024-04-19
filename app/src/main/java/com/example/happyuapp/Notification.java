@@ -15,7 +15,7 @@ public class Notification extends AppCompatActivity {
         String notificationTitle = getIntent().getStringExtra("notification_title");
         String notificationContent = getIntent().getStringExtra("notification_content");
 
-        // Afficher la notification dans votre activité
+        // Afficher la notification dans  activité
         TextView textViewTitle = findViewById(R.id.textViewTitle);
         TextView textViewContent = findViewById(R.id.textViewContent);
         textViewTitle.setText(notificationTitle);
