@@ -8,21 +8,18 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import androidx.fragment.app.Fragment;
 import org.eazegraph.lib.charts.PieChart;
-import org.eazegraph.lib.models.PieModel;
+import org.eazegraph.lib.charts.BarChart;
+import org.eazegraph.lib.models.BarModel;
 
+import org.eazegraph.lib.models.PieModel;
 public class StatistiqueFragment extends Fragment {
 
     private Button click;
-    private PieChart chart;
+    private BarChart chart;
     private int i1 = 15;
     private int i2 = 25;
     private int i3 = 35;
     private int i4 = 45;
-
-
-    public StatistiqueFragment() {
-        // Required empty public constructor
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -31,24 +28,30 @@ public class StatistiqueFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_statistique, container, false);
 
         click = view.findViewById(R.id.btn_click);
-        chart = view.findViewById(R.id.pie_chart);
+        chart = (BarChart) view.findViewById(R.id.bar_chart);
 
         click.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                addToPieChart();
+                addToBarChart();
             }
         });
 
         return view;
     }
 
-    private void addToPieChart() {
-        // add to pie chart
-        chart.addPieSlice(new PieModel("Integer 1", i1, Color.parseColor("#FCFE19")));
-        chart.addPieSlice(new PieModel("Integer 2", i2, Color.parseColor("#47EAD0")));
-        chart.addPieSlice(new PieModel("Integer 3", i3, Color.parseColor("#FE277E")));
-        chart.addPieSlice(new PieModel("Integer 4", i4, Color.parseColor("#CE8F8A")));
+    private void addToBarChart() {
+        // add to bar chart
+        chart.addBar(new BarModel("Sun", i1, Color.parseColor("#47EAD0")));
+        chart.addBar(new BarModel("Mon", i2, Color.parseColor("#47EAD0")));
+        chart.addBar(new BarModel("Tue", i3, Color.parseColor("#47EAD0")));
+        chart.addBar(new BarModel("Wed", i4, Color.parseColor("#47EAD0")));
+        chart.addBar(new BarModel("Thi", i2, Color.parseColor("#47EAD0")));
+        chart.addBar(new BarModel("Fri", i4, Color.parseColor("#47EAD0")));
+        chart.addBar(new BarModel("Sat", i1, Color.parseColor("#47EAD0")));
+
+
+
 
         chart.startAnimation();
         click.setClickable(false);
