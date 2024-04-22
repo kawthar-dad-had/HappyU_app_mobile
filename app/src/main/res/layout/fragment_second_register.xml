@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:background="@color/green"
     android:layout_height="match_parent"
+    android:id="@+id/second_register_fragment"
     tools:context=".SecondRegisterFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout

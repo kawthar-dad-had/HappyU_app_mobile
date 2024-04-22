@@ -7,18 +7,13 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link SecondRegisterFragment#newInstance} factory method to
+ * Use the {@link PreferenceFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class SecondRegisterFragment extends Fragment {
-
-    EditText nameEdit, firstNameEdit, birthdayEdit, countryEdit, cityEdit;
-    Button suivantBtn;
+public class PreferenceFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -29,7 +24,7 @@ public class SecondRegisterFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public SecondRegisterFragment() {
+    public PreferenceFragment() {
         // Required empty public constructor
     }
 
@@ -39,11 +34,11 @@ public class SecondRegisterFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment SecondRegisterFragment.
+     * @return A new instance of fragment Preference.
      */
     // TODO: Rename and change types and number of parameters
-    public static SecondRegisterFragment newInstance(String param1, String param2) {
-        SecondRegisterFragment fragment = new SecondRegisterFragment();
+    public static PreferenceFragment newInstance(String param1, String param2) {
+        PreferenceFragment fragment = new PreferenceFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -64,25 +59,6 @@ public class SecondRegisterFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view =  inflater.inflate(R.layout.fragment_second_register, container, false);
-        nameEdit = view.findViewById(R.id.nomEditText);
-        firstNameEdit = view.findViewById(R.id.prenomEditText);
-        birthdayEdit = view.findViewById(R.id.datDeNaissanceEdit);
-        countryEdit = view.findViewById(R.id.paysEdtiText);
-        cityEdit = view.findViewById(R.id.villeEditText);
-        suivantBtn = view.findViewById(R.id.fragment2_suivantBtn);
-
-        suivantBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.second_register_fragment, new PreferenceFragment())
-                        .addToBackStack(null) // Optional: Adds the transaction to the back stack
-                        .commit();
-            }
-        });
-    
-        return  view;
-
+        return inflater.inflate(R.layout.fragment_preference, container, false);
     }
 }
