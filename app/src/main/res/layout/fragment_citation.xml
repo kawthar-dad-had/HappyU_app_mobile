@@ -7,6 +7,11 @@
     android:background="@color/green_clair"
     tools:context=".CitationFragment">
 
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -14,18 +19,19 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
 
-        android:background="@color/green_clair"
         android:orientation="vertical"
+        android:background="@color/green_clair"
         tools:context=".SecondActivity">
 
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
             android:layout_marginStart="24dp"
             android:layout_marginTop="24dp"
-            android:gravity="start"
-            android:orientation="horizontal">
+            android:gravity="start">
+
 
 
         </LinearLayout>
@@ -48,13 +54,20 @@
             android:layout_width="392dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:text="Bienvenue dans notre application! Votre réussite et votre bien-être sont notre priorité. \n Votre réussite et votre bien-être sont notre priorité.  "
+
             android:fontFamily="@font/dancing_bold"
 
-            android:text="Votre réussite et votre bien-être sont notre priorité. "
             android:textColor="@color/white"
-            android:textSize="30sp"
+            android:textSize="20sp"
 
-            />
+            android:textStyle="italic"
+
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewQuizOption"
+            app:layout_constraintStart_toEndOf="@+id/imageViewQuizOption"
+            app:layout_constraintTop_toTopOf="@+id/imageViewQuizOption"
+            app:layout_constraintVertical_bias="0.0" />
+        />
 
         <TextView
             android:id="@+id/tvUsernameHome"
@@ -66,8 +79,6 @@
             app:layout_constraintStart_toStartOf="@+id/textView2"
             app:layout_constraintTop_toBottomOf="@+id/textView2"
             tools:text="" />
-
-
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -75,7 +86,6 @@
             android:padding="10dp"
             app:cardBackgroundColor="@color/cardview_light_background"
             app:cardCornerRadius="8dp">
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -89,7 +99,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="L'échec est simplement l'opportunité de recommencer, mais cette fois, plus intelligemment."
-                    android:textStyle="italic" />
+                    android:textStyle="italic"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -108,18 +118,16 @@
                 android:orientation="vertical"
                 android:padding="10dp">
 
-
                 <TextView
                     android:id="@+id/textView11"
                     android:layout_width="298dp"
                     android:layout_height="wrap_content"
                     android:text=" Le chemin vers le succès et la réussite est pavé d'efforts, de détermination et de persévérance."
-                    android:textStyle="italic" />
+                    android:textStyle="italic"/>
 
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
-
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -127,7 +135,6 @@
             android:padding="10dp"
             app:cardBackgroundColor="@color/cardview_light_background"
             app:cardCornerRadius="8dp">
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -141,7 +148,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="La clé de la réussite est de se concentrer sur les objectifs, de ne pas s'inquiéter de ce qui peut arriver et de se concentrer sur ce qu'il faut faire"
-                    android:textStyle="italic" />
+                    android:textStyle="italic"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -152,13 +159,14 @@
             android:padding="10dp"
             app:cardBackgroundColor="@color/green_clair"
             app:cardCornerRadius="8dp">
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/Light_Green_50"
                 android:orientation="vertical"
+                android:background="@color/Light_Green_50"
                 android:padding="10dp">
+
+
 
 
                 <TextView
@@ -166,7 +174,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Vous êtes plus fort que vous ne le pensez, plus talentueux que vous ne le savez, et plus capable que vous ne l'avez jamais imaginé."
-                    android:textStyle="italic" />
+                    android:textStyle="italic"/>
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -178,13 +186,15 @@
             android:padding="10dp"
             app:cardBackgroundColor="@color/cardview_light_background"
             app:cardCornerRadius="8dp">
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/Light_Green_50"
                 android:orientation="vertical"
+                android:background="@color/Light_Green_50"
                 android:padding="10dp">
+
+
+
 
 
                 <TextView
@@ -192,7 +202,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Ne doutez jamais que vous êtes capable de changer le monde. En fait, c'est la seule chose qui se soit jamais produite."
-                    android:textStyle="italic" />
+                    android:textStyle="italic"/>
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -204,13 +214,14 @@
             android:padding="10dp"
             app:cardBackgroundColor="@color/green_clair"
             app:cardCornerRadius="8dp">
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/Light_Green_50"
                 android:orientation="vertical"
+                android:background="@color/Light_Green_50"
                 android:padding="10dp">
+
+
 
 
                 <TextView
@@ -218,12 +229,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Vous êtes plus fort que vous ne le pensez, plus talentueux que vous ne le savez, et plus capable que vous ne l'avez jamais imaginé."
-                    android:textStyle="italic" />
+                    android:textStyle="italic"/>
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
-
-
     </LinearLayout>
 
 

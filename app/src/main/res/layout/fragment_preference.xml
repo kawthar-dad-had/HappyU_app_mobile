@@ -23,11 +23,7 @@
         android:id="@+id/textViewTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
-        android:text="Séléctionnez vos Préférences"
-=======
         android:text="Séléctionner vos Préférences"
->>>>>>> f2b12f47fb6a79e6a19aeade5bf8062d23a186cb
         android:textSize="25sp"
         android:textStyle="bold"
         android:textColor="@color/white"
@@ -281,11 +277,7 @@
                 android:id="@+id/imageView6"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-<<<<<<< HEAD
-                 />
-=======
                 />
->>>>>>> f2b12f47fb6a79e6a19aeade5bf8062d23a186cb
 
 
 

@@ -11,7 +11,6 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
         <TextView
             android:id="@+id/second_fragment_txt"
             android:layout_width="wrap_content"
@@ -25,7 +24,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout"
             android:layout_width="0dp"
@@ -35,7 +33,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/second_fragment_txt">
-
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textInputLayout5"
                 style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
@@ -54,9 +51,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
-
             </com.google.android.material.textfield.TextInputLayout>
-
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/nomEditText"
                 android:layout_width="0dp"
@@ -70,7 +65,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textInputLayout7"
                 style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
@@ -89,9 +83,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
-
             </com.google.android.material.textfield.TextInputLayout>
-
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/prenomEditText"
                 android:layout_width="0dp"
@@ -105,7 +97,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/nomEditText" />
-
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textInputLayout8"
                 style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
@@ -124,9 +115,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
-
             </com.google.android.material.textfield.TextInputLayout>
-
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/datDeNaissanceEdit"
                 android:layout_width="0dp"
@@ -140,7 +129,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/prenomEditText" />
-
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textInputLayout9"
                 style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
@@ -159,9 +147,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
-
             </com.google.android.material.textfield.TextInputLayout>
-
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/paysEdtiText"
                 android:layout_width="0dp"
@@ -175,7 +161,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/datDeNaissanceEdit" />
-
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textInputLayout10"
                 style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
@@ -194,9 +179,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
-
             </com.google.android.material.textfield.TextInputLayout>
-
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/villeEditText"
                 android:layout_width="0dp"
@@ -210,7 +193,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/paysEdtiText" />
-
             <Button
                 android:id="@+id/fragment2_suivantBtn"
                 android:layout_width="wrap_content"
@@ -223,12 +205,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/villeEditText" />
-
-
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 </FrameLayout>
