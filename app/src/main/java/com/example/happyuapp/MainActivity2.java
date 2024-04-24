@@ -70,33 +70,17 @@ public class MainActivity2 extends AppCompatActivity {
         dialog.setContentView(R.layout.bottomsheetlayout);
 
         LinearLayout videoLayout = dialog.findViewById(R.id.layoutVideo);
-        LinearLayout shortsLayout = dialog.findViewById(R.id.layoutShorts);
-        LinearLayout liveLayout = dialog.findViewById(R.id.layoutLive);
         ImageView cancelButton = dialog.findViewById(R.id.cancelButton);
 
         videoLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dialog.dismiss();
-                Toast.makeText(MainActivity2.this, "Upload a Video is clicked", Toast.LENGTH_SHORT).show();
+                replaceFragment(new CalendrierFragment());
             }
         });
 
-        shortsLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.dismiss();
-                Toast.makeText(MainActivity2.this, "Create a short is Clicked", Toast.LENGTH_SHORT).show();
-            }
-        });
 
-        liveLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.dismiss();
-                Toast.makeText(MainActivity2.this, "Go live is Clicked", Toast.LENGTH_SHORT).show();
-            }
-        });
 
         cancelButton.setOnClickListener(new View.OnClickListener() {
             @Override

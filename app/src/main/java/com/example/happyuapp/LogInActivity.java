@@ -63,6 +63,7 @@ public class LogInActivity extends AppCompatActivity {
                 boolean isValid = checkLoginCredentials(email, password);
 
                 if (isValid) {
+                    CustomAuthManager.setCurrentLoggedInEmail(email);
                     Intent i = new Intent(getApplicationContext(), MainActivity2.class);
                     startActivity(i);
                     finish();
