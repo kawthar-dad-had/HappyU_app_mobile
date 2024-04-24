@@ -21,7 +21,7 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         viewPager2 = findViewById(R.id.view_pager);
-        adapter = new MyAdapter(this, 2);
+        adapter = new MyAdapter(this, 1);
 
         viewPager2.setAdapter(adapter);
     }

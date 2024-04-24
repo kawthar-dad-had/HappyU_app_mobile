@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,6 +18,7 @@ public class LogInActivity extends AppCompatActivity {
     TextView logInTxt;
     EditText emailEditText, passwordEditText;
     Button logInButton, RegisterButton;
+    ImageView goBackImg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,15 @@ public class LogInActivity extends AppCompatActivity {
         passwordEditText = findViewById(R.id.passwordEditText);
         logInButton = findViewById(R.id.logInButton);
         RegisterButton = findViewById(R.id.RegisterButton);
+        goBackImg = findViewById(R.id.go_back);
+
+        goBackImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(i);
+            }
+        });
 
         //Create Compte juste for testing
         DatabaseHelper dbHelper = new DatabaseHelper(this);

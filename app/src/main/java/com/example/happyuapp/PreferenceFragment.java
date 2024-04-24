@@ -1,5 +1,6 @@
 package com.example.happyuapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -21,6 +23,7 @@ public class PreferenceFragment extends Fragment {
     private static final String ARG_PARAM2 = "param2";
 
     // TODO: Rename and change types of parameters
+    Button suivantBtn;
     private String mParam1;
     private String mParam2;
 
@@ -59,6 +62,16 @@ public class PreferenceFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_preference, container, false);
+        View view =  inflater.inflate(R.layout.fragment_preference, container, false);
+        suivantBtn = view.findViewById(R.id.terminer);
+
+        suivantBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getContext(), LogInActivity.class);
+                startActivity(i);
+            }
+        });
+        return view;
     }
 }

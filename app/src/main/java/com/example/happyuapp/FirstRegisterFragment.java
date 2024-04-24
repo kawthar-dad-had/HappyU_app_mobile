@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 /**
@@ -23,6 +24,7 @@ public class FirstRegisterFragment extends Fragment {
 
     EditText emailEdit, passwordEdit, passwordConfirmationEdit;
     Button suivantBtn, registerButton;
+    ImageView goBack2;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -75,6 +77,15 @@ public class FirstRegisterFragment extends Fragment {
         passwordConfirmationEdit = view.findViewById(R.id.confirmation_de_mot_de_passe_edit_text);
         suivantBtn = view.findViewById(R.id.suivant_btn);
         registerButton = view.findViewById(R.id.register_button);
+        goBack2 = view.findViewById(R.id.go_back2);
+
+        goBack2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getContext(), MainActivity.class);
+                startActivity(i);
+            }
+        });
 
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override

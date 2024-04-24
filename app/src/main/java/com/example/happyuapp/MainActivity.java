@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         existingAccountTxt = findViewById(R.id.ExistingTxt);
 
         // Adding functionalities
-        logoImg.setImageResource(R.drawable.logo);
+        logoImg.setImageResource(R.drawable.logo_app);
 
         seConnecterBtn.setOnClickListener(new View.OnClickListener() {
             @Override
