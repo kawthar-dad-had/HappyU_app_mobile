@@ -59,7 +59,7 @@ public class SecondRegisterFragment extends Fragment {
         birthdayEdit = view.findViewById(R.id.datDeNaissanceEdit);
         countryEdit = view.findViewById(R.id.paysEdtiText);
         cityEdit = view.findViewById(R.id.villeEditText);
-        suivantBtn = view.findViewById(R.id.fragment2_suivantBtn);
+        suivantBtn = view.findViewById(R.id.buttonEnvoyer);
 
         suivantBtn.setOnClickListener(new View.OnClickListener() {
             @Override
