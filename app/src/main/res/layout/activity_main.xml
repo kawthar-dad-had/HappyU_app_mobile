@@ -24,7 +24,7 @@
         android:layout_marginTop="163dp"
         android:text="Booste ton esprit,
          adopte notre app"
-        android:textColor="@color/orangy"
+        android:textColor="@color/white"
         android:textSize="45sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,31 +43,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <TextView
         android:id="@+id/inscrireBtn"
-        android:layout_width="136dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="144dp"
-        android:backgroundTint="@color/green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:text="S'inscrire"
-        android:textColor="@color/orangy"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/ExistingTxt"
-        app:layout_constraintTop_toBottomOf="@+id/ExistingTxt" />
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ExistingTxt"
+        app:layout_constraintStart_toEndOf="@+id/ExistingTxt" />
 
     <TextView
         android:id="@+id/ExistingTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
         android:layout_marginTop="580dp"
-        android:text="Vous n'avez pas de compte?"
+        android:text="Vous n'avez pas de compte ?"
         android:textColor="@color/grey"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

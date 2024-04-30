@@ -34,11 +34,12 @@ public class StatistiqueFragment extends Fragment {
 
         click = view.findViewById(R.id.btn_click);
         chart = (BarChart) view.findViewById(R.id.bar_chart);
+        addToBarChart();
 
         click.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                addToBarChart();
+
             }
         });
 
@@ -47,13 +48,13 @@ public class StatistiqueFragment extends Fragment {
 
         private void addToBarChart() {
             // add to bar chart
-            chart.addBar(new BarModel("Sun", i1, Color.parseColor("#47EAD0")));
-            chart.addBar(new BarModel("Mon", i2, Color.parseColor("#47EAD0")));
-            chart.addBar(new BarModel("Tue", i3, Color.parseColor("#47EAD0")));
-            chart.addBar(new BarModel("Wed", i4, Color.parseColor("#47EAD0")));
-            chart.addBar(new BarModel("Thi", i2, Color.parseColor("#47EAD0")));
-            chart.addBar(new BarModel("Fri", i4, Color.parseColor("#47EAD0")));
-            chart.addBar(new BarModel("Sat", i1, Color.parseColor("#47EAD0")));
+            chart.addBar(new BarModel("Sun", i1, Color.parseColor("#F9B34C")));
+            chart.addBar(new BarModel("Mon", i2, Color.parseColor("#F9B34C")));
+            chart.addBar(new BarModel("Tue", i3, Color.parseColor("#F9B34C")));
+            chart.addBar(new BarModel("Wed", i4, Color.parseColor("#F9B34C")));
+            chart.addBar(new BarModel("Thi", i2, Color.parseColor("#F9B34C")));
+            chart.addBar(new BarModel("Fri", i4, Color.parseColor("#F9B34C")));
+            chart.addBar(new BarModel("Sat", i1, Color.parseColor("#F9B34C")));
 
             chart.startAnimation();
             click.setClickable(false);

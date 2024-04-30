@@ -1,4 +1,5 @@
 package com.example.happyuapp;
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
@@ -64,11 +65,10 @@ public class SecondRegisterFragment extends Fragment {
         suivantBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.second_register_fragment, new PreferenceFragment())
-                        .addToBackStack(null) // Optional: Adds the transaction to the back stack
-                        .commit();
+                Intent i = new Intent(getContext(), LogInActivity.class);
+                startActivity(i);
             }
+
         });
 
         return  view;

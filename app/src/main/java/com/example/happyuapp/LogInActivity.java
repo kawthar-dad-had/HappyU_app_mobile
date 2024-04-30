@@ -46,8 +46,6 @@ public class LogInActivity extends AppCompatActivity {
 
         if (insertionReussie) {
             Toast.makeText(this, "Compte inséré avec succès", Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(this, "Échec de l'insertion du compte", Toast.LENGTH_SHORT).show();
         }
 
         // Register Button

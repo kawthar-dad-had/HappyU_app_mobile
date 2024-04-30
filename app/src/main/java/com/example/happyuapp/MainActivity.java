@@ -12,8 +12,8 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     ImageView logoImg;
-    TextView sloganTxt, existingAccountTxt;
-    Button seConnecterBtn, inscrireBtn;
+    TextView sloganTxt, existingAccountTxt, inscrireBtn;
+    Button seConnecterBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

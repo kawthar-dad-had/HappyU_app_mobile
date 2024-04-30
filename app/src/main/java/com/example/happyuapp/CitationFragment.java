@@ -50,10 +50,9 @@ public class CitationFragment extends Fragment {
 
         // Configurez l'AlarmManager pour déclencher le service toutes les deux heures
 
-        new NotificationScheduler().scheduleNotification(requireContext());
 
         //Affiche la notification de test lors de la création du fragment
-        showTestNotification();
+
     }
 
     @Override
@@ -66,10 +65,5 @@ public class CitationFragment extends Fragment {
         return view;
     }
 
-    private void showTestNotification() {
 
-        Intent intent = new Intent(requireContext(), NotificationScheduler.class);
-        intent.setAction("com.example.notification.TEST_NOTIFICATION");
-        requireContext().sendBroadcast(intent);
-    }
 }
